@@ -1,4 +1,7 @@
 langchain
-langchain-community
 wikipedia
 youtube_search
+langgraph
+langchain_openai
+pypdf
+langchain_community
