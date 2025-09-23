@@ -50,6 +50,3 @@ class LLM_provider():
         embedding_model=self.get_embedding_model()
         return embedding_model.embed_query(text)
     
-    def embed_documents(self, texts):
-        embedding_model = self.get_embedding_model()
-        return embedding_model.embed_documents(texts)

@@ -5,3 +5,5 @@ langgraph
 langchain_openai
 pypdf
 langchain_community
+chromadb
+langchain-chroma
