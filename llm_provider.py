@@ -40,10 +40,10 @@ class LLM_provider():
             )
         return self.embedding
 
-    def invoke(self,input):
-        llm=self.get_llm()
-        output=llm.invoke(input)
-        return output.content
+    # def invoke(self,input):
+    #     llm=self.get_llm()
+    #     output=llm.invoke(input)
+    #     return output.content
     
 
     def embed_query(self,text):
