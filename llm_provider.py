@@ -29,8 +29,8 @@ class LLM_provider():
     def get_embedding_model(self):
         if self.embedding is None:
             model=os.getenv("AZURE_OPENAI_EMBEDDING_DEPLOYMENT")
-            endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
-            api_key = os.getenv("AZURE_OPENAI_API_KEY")
+            endpoint = os.getenv("AZURE_EMBEDDING_ENDPOINT")
+            api_key = os.getenv("AZURE_EMBEDDING_API_KEY")
             api_version = os.getenv("AZURE_OPENAI_API_VERSION", "2024-12-01-preview")
             self.embedding=AzureOpenAIEmbeddings(
                 model=model,
@@ -40,11 +40,6 @@ class LLM_provider():
             )
         return self.embedding
 
-    # def invoke(self,input):
-    #     llm=self.get_llm()
-    #     output=llm.invoke(input)
-    #     return output.content
-    
 
     def embed_query(self,text):
         embedding_model=self.get_embedding_model()
